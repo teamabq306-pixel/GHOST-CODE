@@ -1,0 +1,176 @@
+/* ═══════════════════════════════════════════════════════════════════
+   GHOST CODE v2.0 — Admin Panel Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+.gc-admin-body { background: #060606; min-height: 100vh; }
+
+/* ── Login ─────────────────────────────────────────────────────────── */
+.gc-admin-login {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.012) 40px, rgba(255,255,255,0.012) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.012) 40px, rgba(255,255,255,0.012) 41px),
+    #060606;
+}
+.gc-login-box {
+  background: var(--gc-bg-card);
+  border: 1px solid var(--gc-border-alt);
+  border-radius: var(--gc-radius-lg);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+}
+.gc-admin-logo-wrap img { height: 56px; width: auto; object-fit: contain; }
+.gc-input-icon {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid var(--gc-border-alt) !important;
+  border-right: none !important;
+  color: var(--gc-text-muted) !important;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────────────── */
+.gc-admin-sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 64px;
+  background: var(--gc-bg-alt);
+  border-right: 1px solid var(--gc-border);
+  padding: 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+.gc-admin-sidebar:hover { width: 220px; }
+
+.gc-sidebar-brand {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gc-border);
+  min-height: 50px;
+}
+.gc-admin-logo-sm { height: 28px; width: auto; min-width: 28px; object-fit: contain; }
+.gc-sidebar-nav { flex: 1; margin-top: 1rem; }
+.gc-sidebar-footer { border-top: 1px solid var(--gc-border); padding-top: 1rem; }
+
+.gc-sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 0.5rem;
+  color: var(--gc-text-muted) !important;
+  text-decoration: none;
+  border-radius: var(--gc-radius);
+  font-size: 0.85rem;
+  font-family: var(--gc-font-mono);
+  white-space: nowrap;
+  transition: all var(--gc-transition);
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+.gc-sidebar-link i { font-size: 1.1rem; min-width: 1.4rem; }
+.gc-sidebar-link span { overflow: hidden; }
+.gc-sidebar-link:hover, .gc-sidebar-link.active {
+  background: rgba(255,255,255,0.07);
+  color: var(--gc-white) !important;
+}
+
+/* ── Main Content ──────────────────────────────────────────────────── */
+.gc-admin-main {
+  margin-left: 64px;
+  padding: 2rem;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+.gc-admin-sidebar:hover ~ .gc-admin-main { margin-left: 220px; }
+
+.gc-admin-section { display: block; }
+.gc-admin-section.d-none { display: none !important; }
+
+.gc-admin-topbar {
+  border-bottom: 1px solid var(--gc-border);
+  padding-bottom: 1rem;
+}
+
+/* ── Stat Cards ────────────────────────────────────────────────────── */
+.gc-stat-card {
+  background: var(--gc-bg-card);
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--gc-transition);
+}
+.gc-stat-card:hover { border-color: var(--gc-border-alt); box-shadow: var(--gc-glow); }
+.gc-stat-card i { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.gc-stat-card-num { font-family: var(--gc-font-mono); font-size: 2.2rem; font-weight: 700; color: var(--gc-white); }
+.gc-stat-card-label { font-size: 0.75rem; color: var(--gc-text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.25rem; }
+
+/* ── Portfolio Admin Cards ─────────────────────────────────────────── */
+.gc-admin-portfolio-card {
+  background: var(--gc-bg-card);
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-lg);
+  overflow: hidden;
+  transition: all var(--gc-transition);
+}
+.gc-admin-portfolio-card:hover { border-color: var(--gc-border-alt); }
+.gc-admin-portfolio-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--gc-border);
+}
+.gc-admin-portfolio-card .gc-card-body { padding: 1rem; }
+.gc-admin-portfolio-card .gc-no-img {
+  width: 100%;
+  height: 100px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--gc-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gc-text-muted);
+  font-size: 1.5rem;
+}
+
+/* ── Contact Table ─────────────────────────────────────────────────── */
+.gc-contact-row {
+  background: var(--gc-bg-card);
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  transition: border-color var(--gc-transition);
+}
+.gc-contact-row:hover { border-color: var(--gc-border-alt); }
+.gc-contact-meta { font-family: var(--gc-font-mono); font-size: 0.72rem; color: var(--gc-text-muted); }
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .gc-admin-main { margin-left: 0 !important; padding: 1rem; padding-top: 4rem; }
+  .gc-admin-sidebar { width: 100% !important; height: 56px; flex-direction: row; align-items: center; bottom: auto; padding: 0 1rem; }
+  .gc-admin-sidebar:hover { width: 100% !important; height: 56px; }
+  .gc-sidebar-brand { border: none; padding: 0; margin: 0; }
+  .gc-sidebar-nav, .gc-sidebar-footer { display: none; }
+}
+
+/* ── Admin firma ────────────────────────────────────────────────────── */
+.gc-admin-body .gc-firma {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.2rem;
+  font-family: var(--gc-font-mono);
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.14);
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  z-index: 9999;
+  text-transform: uppercase;
+}
